@@ -42,3 +42,20 @@ end
 segundos_em_anos = calcula_segundos_em_anos(anos_em_segundos)
 puts segundos_em_anos.to_s + " anos em " + anos_em_segundos.to_s + " segundos"
 
+puts ""
+
+anos = 4
+horas = calcula_anos_em_horas(anos)
+puts horas.to_s + " horas em " + anos.to_s + " anos"
+
+decadas = 3
+minutos = calcula_decadas_em_minutos(decadas)
+puts minutos.to_s + " minutos em " + decadas.to_s + " decadas"
+
+idade = 33
+segundos = calcula_idade_em_segundos(idade)
+puts segundos.to_s + " segundos em " + idade.to_s + " anos"
+
+anos_em_segundos = 1432000000
+segundos_em_anos = calcula_segundos_em_anos(anos_em_segundos)
+puts segundos_em_anos.to_s + " anos em " + anos_em_segundos.to_s + " segundos"

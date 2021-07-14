@@ -87,3 +87,4 @@ puts fase_pandemica(0.1, 0.7, 0.5)
 
 
 
+

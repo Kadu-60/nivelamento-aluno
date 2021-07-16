@@ -7,6 +7,7 @@
 puts "Bem-vindo ao jogo de adivinhação!"
 puts "O computador pensou em um número entre 0 e 100. Tente adivinhar!"
 
+
 # computador pensando no número...
 numero = rand(0..100)
 
@@ -41,7 +42,7 @@ def jogo_adivinhacao(numero)
                 x = 1
                 y = y + 1
                 puts "Acertou! O número é " + "(" + numero.to_s + ")"
-                puts "Seu numero de tentativas foi = " + y.to_s
+                puts "Seu numero de tentativas validas foi = " + y.to_s
 
             elsif chute.to_i > numero 
                 y = y + 1

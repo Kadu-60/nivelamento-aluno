@@ -7,13 +7,6 @@
 # 7 x 3 = 21
 # ... até
 # 7 x 10 = 70
-# 2) Faça um programa para calcular o Mínimo Múltiplo Comum (MMC) entre dois números inteiros.
-# Como o próprio nome diz, o MMC é o menor número inteiro que é múltiplo comum de outros números.
-# Perguntar ao usuários os dois números inteiros que ele quer saber o MMC.
-# Ex.:
-# MMC 2, 3 = 6
-# MMC 2, 10 = 10
-# MMC 5, 8 = 40
 
 puts "Digite um numero para calcular a taboada"
 numero = gets.chomp.to_i
@@ -25,7 +18,7 @@ def calcula_taboada(numero)
     end
     x = 1
     while x <= 10
-        puts x * numero
+        puts numero.to_s + "x" + x.to_s + "=" + (x * numero).to_s
         x = x + 1
     end
 end

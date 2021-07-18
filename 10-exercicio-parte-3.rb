@@ -31,8 +31,7 @@ def imprime_desenho(base)
                 print "**"
                 z = z - 2
             end
-            print "*"
-            puts ""
+            puts "*"
             x = x + 2
             z = x
         end

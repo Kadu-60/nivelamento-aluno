@@ -5,9 +5,8 @@
 
 def insere_no_array(array, valor, posicao_alvo)
     tamanho = array.size
-    x = 0
 
-    if posicao_alvo > tamanho || posicao_alvo < 0
+    if posicao_alvo >= tamanho || posicao_alvo < 0
         return false
     else while tamanho > posicao_alvo
         array[tamanho] = array[tamanho - 1]

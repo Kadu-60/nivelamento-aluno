@@ -14,7 +14,20 @@ end
 
 array = [5, 6, 65, 234, 0, 3]
 
+print array
+puts ""
+puts "Digite o valor a ser encontrado no array"
 valor = gets.to_i
 
 puts ""
+puts posicao_no_array(array, valor)
+
+array = [rand(100), rand(100), rand(100), rand(100), rand(100), rand(100), ]
+
+print array
+puts ""
+puts "Digite o valor a ser encontrado no array"
+valor = gets.to_i
+puts ""
+
 print posicao_no_array(array, valor)

@@ -24,14 +24,14 @@ def imprime_desenho(base)
     z = 1
     
     if base.even? == false
-          
+        puts "*"
+    
         while x < base
-            puts "*"
             while z > 0
                 print "**"
                 z = z - 2
             end
-
+            puts "*"
             x = x + 2
             z = x
         end

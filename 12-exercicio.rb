@@ -14,21 +14,41 @@ def insere_no_array(array, valor, posicao_alvo)
         tamanho = tamanho - 1
         end
         array[posicao_alvo] = valor
-        return 1
+        return true
     end
 end
 
-array = [1,2,3,4,5,6,7]
+def gera_array
+
+    aux = 0
+    puts "Digite o tamanho do array"
+    tamanho = gets.to_i
+
+    array = [tamanho-1]
+
+    while aux < tamanho
+        array[aux] = rand(100)
+        aux = aux + 1
+        
+    end
+
+    return array
+
+
+
+end
+
+array = gera_array
 
 print array
 puts ""
 
-puts "valor"
+puts "Digite o valor a ser inserido"
 valor = gets.to_i
 
-puts "posicao"
+puts "Digite a posição em que o valor será inserido"
 posicao_alvo = gets.to_i
 
-print insere_no_array(array, valor, posicao_alvo)
+insere_no_array(array, valor, posicao_alvo)
 print array
     

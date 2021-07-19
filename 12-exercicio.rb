@@ -24,7 +24,7 @@ def gera_array
     puts "Digite o tamanho do array"
     tamanho = gets.to_i
 
-    array = [tamanho-1]
+    array = []
 
     while aux < tamanho
         array[aux] = rand(100)

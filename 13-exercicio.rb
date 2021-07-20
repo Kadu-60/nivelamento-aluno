@@ -31,6 +31,10 @@ def remove_da_posicao(array, posicao_alvo)
     aux = []
 
     while y < array.size
+        if posicao_alvo <= 0 || posicao_alvo >= array.size-1
+            return array
+        end
+
         if y == posicao_alvo
             y = y + 1
             if y >= array.size

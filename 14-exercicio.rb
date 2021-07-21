@@ -24,21 +24,6 @@ def remove_da_posicao(array, posicao_alvo)
 
 end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 def sortear_numeros(qtd, limite_inicio, limite_fim)
     # implemente aqui!
     aux = []
@@ -81,25 +66,37 @@ def obter_apostas(qtd, limite_inicio, limite_fim)
     # implemente aqui!
     array = []
     aux = []
+    puts "Desejo fazer uma aposta aleatoria-Digite( 1 ) / Desejo inserir os numeros manualmente-Digite( qualquer outro caracter )"
+    opcao = gets.to_i
     for x in (limite_inicio..limite_fim)
         aux[x-1] = x
     end
-    puts "Digite os numeros da aposta, escolha " + qtd.to_s + "numeros entre " + limite_inicio.to_s + " e " + limite_fim.to_s
-    puts "Digite um numero por vez"
-    for y in (1..qtd)
-        posicao = recebe_aposta(limite_inicio, limite_fim) - 1
-        array[y-1] = aux[posicao]
-        aux[posicao] = nil
-        if array[y-1] == nil
-            while array[y-1] == nil
-                puts "Numero ja usado, escolha outro"
-                posicao = recebe_aposta(limite_inicio, limite_fim) - 1
-                array[y-1] = aux[posicao]
+    if opcao == 1
+        for a in (1..qtd)
+            tamanho = aux.size
+            posicao = rand(1..tamanho) - 1
+            array[a-1] = aux[posicao]
+            aux = remove_da_posicao(aux, posicao)
+        end
+        return array
+    else   
+        puts "Digite os numeros da aposta, escolha " + qtd.to_s + "numeros entre " + limite_inicio.to_s + " e " + limite_fim.to_s
+        puts "Digite um numero por vez"
+        for y in (1..qtd)
+            posicao = recebe_aposta(limite_inicio, limite_fim) - 1
+            array[y-1] = aux[posicao]
+            aux[posicao] = nil
+            if array[y-1] == nil
+                while array[y-1] == nil
+                    puts "Numero ja usado, escolha outro"
+                    posicao = recebe_aposta(limite_inicio, limite_fim) - 1
+                    array[y-1] = aux[posicao]
+                end
             end
         end
-    end
 
-    return array
+        return array
+    end
 
 end
 
@@ -127,7 +124,7 @@ def mega_sena()
      puts "Numeros sorteados: #{sorteados.to_s()}"
      puts "Numeros apostados: #{apostados.to_s()}"
      puts "Acertos: #{acertados.to_s()}"
- end
+end
 mega_sena()
 
 

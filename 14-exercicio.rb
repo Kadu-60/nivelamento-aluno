@@ -50,7 +50,7 @@ def sortear_numeros(qtd, limite_inicio, limite_fim)
 
     for y in (1..qtd)
         tamanho = aux.size
-        posicao = rand(tamanho) - 1
+        posicao = rand(1..tamanho) - 1
         array[y-1] = aux[posicao]
         aux = remove_da_posicao(aux, posicao)
     end

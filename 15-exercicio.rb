@@ -58,7 +58,7 @@ def embaralhador(baralho)
 
     for y in (1..qtd)
         tamanho = baralho.size
-        posicao = rand(tamanho) - 1
+        posicao = rand(1..tamanho) - 1
         array[y-1] = baralho[posicao]
         baralho = remove_da_posicao(baralho, posicao)
     end
